@@ -82,7 +82,19 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// make a CSV copy
+
+let csv = [] 
+
+runners.forEach(runner => csv.push(runner.first_name + "," + runner.last_name + "," + runner.email + "," + runner.shirt_size + "," + runner.company_name + "," + runner.donation));
+
+console.log(csv);
 
 // Problem 2
+// Since this is a Hatfeild sponsored event, make a function that has anyone by the name of McCoy in there
+
+let mapThatName = runners.map(x => x.last_name === "McCoy" ? x.first_name + " " + x.last_name + " " + x.email : x.last_name)
+
+console.log(mapThatName);
 
 // Problem 3
