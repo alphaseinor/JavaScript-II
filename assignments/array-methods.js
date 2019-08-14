@@ -91,10 +91,14 @@ runners.forEach(runner => csv.push(runner.first_name + "," + runner.last_name + 
 console.log(csv);
 
 // Problem 2
-// Since this is a Hatfeild sponsored event, make a function that has anyone by the name of McCoy in there
+// Since this is a Hatfeild sponsored event, make a function that has anyone by the name of McCoy in there display their first, last and email, otherwise, just list their last name
 
 let mapThatName = runners.map(x => x.last_name === "McCoy" ? x.first_name + " " + x.last_name + " " + x.email : x.last_name)
 
 console.log(mapThatName);
 
 // Problem 3
+// somehow people have ordered small shirts, since this is a 100k super fun time happy bus run, they will blow away from being too light, we need to get a list so they don't show up and die from self-consumption. 
+
+let smallShirts = runners.filter(runner => runner.shirt_size === 'S');
+console.log(smallShirts);
